@@ -4,9 +4,9 @@ import { Link, Outlet } from "react-router-dom";
 export const MainLayout = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top bg-dark border-bottom border-dark">
+      <nav className="navbar navbar-expand-lg fixed-top bg-warning border-bottom border-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand text-light" to="">
+          <Link className="navbar-brand" to="">
             Medium
           </Link>
           <button
@@ -23,12 +23,12 @@ export const MainLayout = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link text-light active" aria-current="page" to="">
+                <Link className="nav-link" to="">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-light" to="">
+                <Link className="nav-link" to="">
                   Link
                 </Link>
               </li>

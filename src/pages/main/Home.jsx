@@ -1,7 +1,16 @@
 import React from "react";
 import pic from "../../assets/react.svg";
+import { CardBlog } from "../../components/CardBlog";
 
 export const Home = () => {
+  const userDummy = [
+    { ava: pic, name: "ayyub", postDate: "2 jan" },
+    { ava: pic, name: "idin", postDate: "3 jan" },
+    { ava: pic, name: "david", postDate: "4 jan" },
+    { ava: pic, name: "sanusi", postDate: "5 jan" },
+    { ava: pic, name: "disa", postDate: "6 jan" },
+    { ava: pic, name: "aya", postDate: "7 jan" }
+  ];
   return (
     <>
       <div
@@ -21,30 +30,17 @@ export const Home = () => {
           Start Reading
         </button>
       </div>
-      <div style={{ height: "100vh" }} className="p-4">
-        <div className="card card-body" style={{ minHeight: "9rem" }}>
-          <div style={{ maxHeight: "2rem" }} className="d-flex">
-            <img
-              src={pic}
-              alt="avatar"
-              className="rounded-circle me-2"
-              style={{ maxHeight: "1.7rem" }}
+      <div style={{ minHeight: "88vh" }} className="p-4">
+        {userDummy.map((item, i) => {
+          return (
+            <CardBlog
+              key={i}
+              user={item}
+              title="Ini adalah sebuah cerita romansa yang tidak biasa, jalannya tidak akan mudah, tentu butuh effort. this us against the world. semoga akhirnya baik-baik saja dan bahagia selama-lamanya"
+              img={pic}
             />
-            <p>Author's Name - posting date</p>
-          </div>
-          <div className="row">
-            <h5 className="card-title text-truncate col">
-              Card title. Some quick example text to build on the card title and
-              make up the bulk of the card's content.
-            </h5>
-            <img
-              src={pic}
-              alt="pic"
-              className="col-3"
-              style={{ maxHeight: "7rem" }}
-            />
-          </div>
-        </div>{" "}
+          );
+        })}
       </div>
     </>
   );
