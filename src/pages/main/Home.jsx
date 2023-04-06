@@ -30,8 +30,8 @@ export const Home = () => {
           Start Reading
         </button>
       </div>
-      <div style={{ minHeight: "88vh" }} className="container row p-4">
-        <div className="col">
+      <div style={{ minHeight: "88vh" }} className="container-fluid row row-cols-1 row-cols-md-2 p-4">
+        <div className="col col-md-8">
           {userDummy.map((item, i) => {
             return (
               <CardBlog
@@ -43,7 +43,7 @@ export const Home = () => {
             );
           })}
         </div>
-        <aside className="col-3 d-none d-md-block text-dark"><hr/></aside>
+        <div className="col-md-4 d-none d-md-block text-dark p-3">ini belum ada isinya trus aku bingung knp ada space after this container</div>
       </div>
     </>
   );
