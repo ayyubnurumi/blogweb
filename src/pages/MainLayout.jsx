@@ -6,7 +6,7 @@ export const MainLayout = () => {
     <>
       <nav className="navbar navbar-expand fixed-top bg-warning border-bottom border-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="">
+          <Link className="navbar-brand" to="/">
             Medusa
           </Link>
           {/* <button
@@ -41,10 +41,10 @@ export const MainLayout = () => {
                 </Link>
               </li>
               <li className="nav-item d-none d-sm-block">
-                <Link className="nav-link">Sign In</Link>
+                <Link className="nav-link" to={'/signin'}>Sign In</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link btn btn-dark rounded-pill px-3 text-light">Get Started</Link>
+                <Link className="nav-link btn btn-dark rounded-pill px-3 text-light" to={'/signin'}>Get Started</Link>
               </li>
             </ul>
             {/* <form className="d-flex" role="search">
