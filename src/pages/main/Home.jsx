@@ -57,21 +57,23 @@ export const Home = () => {
       </div>
 
       {/* -- trending section -- */}
-      <div>
+      <div className="m-5">
         <div>
           <h2>Trending on Medium</h2>
         </div>
-        <ol className="container-fluid row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-around">
+        <ol className="container-fluid row row-cols-1 row-cols-md-2 row-cols-lg-3">
           {userDummy.map((item, i) => {
             const blogItem = blogDummy[i];
             return (
-              <li key={i}>
+              <li key={i} className="col d-flex">
+                <span className="mt-2 text-secondary h2 opacity-25">0{i+1}</span>
                 <CardTrending user={item} blog={blogItem} />
               </li>
             );
           })}
         </ol>
       </div>
+      <hr />
 
       {/* -- main section -- */}
       <div style={{ minHeight: "88vh" }} className="container-fluid row p-4">

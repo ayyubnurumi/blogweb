@@ -4,7 +4,7 @@ import { Avatar } from "./Avatar";
 export const CardTrending = ({key, user, blog}) => {
   return (
     <div
-      className="col card card-body mb-1 border-0 rounded-0"
+      className="card card-body mb-1 border-0 rounded-0"
       style={{ minHeight: "9rem" }}
       key={key}
     >
