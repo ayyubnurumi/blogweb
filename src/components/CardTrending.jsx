@@ -17,7 +17,7 @@ export const CardTrending = ({key, user, blog}) => {
           {user.name}
         </p>
       </div>
-      <h5 className="card-title multiline-text-truncate col align-self-center">
+      <h5 className="card-title multiline-text-truncate-2 col align-self-center">
         {blog.title}
       </h5>
       <p>{blog.postDate} - {blog.timeRead}</p>
