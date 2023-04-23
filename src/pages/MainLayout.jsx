@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 export const MainLayout = () => {
+  const lastScroolTop = useRef(0);
+  const [navbarVisible, setNavbarVisible] = useState(true);
+  const handleScroll = () => {
+    const { pageYOffset } = window;
+    if (pageYOffset > lastScroolTop.current) {
+      // downward scroll
+      setNavbarVisible(false);
+    } else if (pageYOffset < lastScroolTop.current) {
+      // upward scroll
+      setNavbarVisible(true);
+    } // else was horizontal scroll
+    lastScroolTop.current = pageYOffset;
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
   return (
     <>
-      <nav className="navbar navbar-expand fixed-top bg-warning border-bottom border-dark">
+      <nav
+        className={`navbar navbar-expand fixed-top bg-warning border-bottom border-dark`}
+        style={{ translate: `${navbarVisible ? "0 0" : "0 -4rem"}` }}
+      >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <svg viewBox="0 0 3940 610" height={"1.5rem"}>
