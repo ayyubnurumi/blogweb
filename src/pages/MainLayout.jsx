@@ -25,7 +25,7 @@ export const MainLayout = () => {
     <>
       <nav
         className={`navbar navbar-expand fixed-top bg-warning border-bottom border-dark`}
-        style={{ translate: `${navbarVisible ? "0 0" : "0 -4rem"}` }}
+        style={{ translate: `${navbarVisible ? "0 0" : "0 -4rem"}`, transition: "translate .3s linear" }}
       >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
