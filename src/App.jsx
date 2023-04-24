@@ -6,6 +6,8 @@ import { BlogDetail } from './pages/main/BlogDetail'
 import { Profile } from './pages/main/Profile'
 import { SignIn } from './pages/auth/SignIn'
 import { SignUp } from './pages/auth/SignUp'
+import { About } from './pages/main/About'
+import { Membership } from './pages/main/Membership'
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
         <Route index path='/' element={<Home />} replace />
         <Route path='blog' element={<BlogDetail />}/>
         <Route path='profile' element={<Profile />}/>
+        <Route path='about' element={<About />} />
+        <Route path='membership' element={<Membership />} />
       </Route>
       <Route path='signin' element={<SignIn />} />
       <Route path='signup' element={<SignUp />} />
