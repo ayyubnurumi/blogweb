@@ -5,7 +5,8 @@ import App from './App'
 import './styles/index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.js'
-// import { MainLayout } from './pages/MainLayout'
+// import MmmBg from './components/MmmBg'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

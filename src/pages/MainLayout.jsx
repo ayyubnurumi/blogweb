@@ -17,15 +17,18 @@ export const MainLayout = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    }
+    // return () => {
+    //   window.removeEventListener("scroll", handleScroll);
+    // };
   }, []);
   return (
     <>
       <nav
         className={`navbar navbar-expand fixed-top bg-warning border-bottom border-dark`}
-        style={{ translate: `${navbarVisible ? "0 0" : "0 -4rem"}`, transition: "translate .3s linear" }}
+        style={{
+          translate: `${navbarVisible ? "0 0" : "0 -4rem"}`,
+          transition: "translate 1.7s ease",
+        }}
       >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
